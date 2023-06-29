@@ -2,15 +2,15 @@ package com.bank.authentication.controller;
 
 import com.bank.authentication.user.User;
 import com.bank.authentication.user.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
+@RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
     @Autowired
     private UserRepository userRepository;
